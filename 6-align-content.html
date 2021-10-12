@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align-content</title>
+
+    <style>
+        .container{
+            height: 400px; /*precisamos de um tamanho ok para ele funcionar*/
+            max-width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid black;
+        }
+
+        .item{
+            background-color: rgb(241, 119, 48);
+            padding: 0 5px;
+            margin: 5px;
+            flex: 1;
+            text-align: center;
+            color: white;
+            /*border: 2px solid black;*/
+        }
+
+        .stretch{
+            align-content: stretch;
+        }
+
+        .center{
+            align-content: center;
+        }
+
+        .flex-start{
+            align-content: flex-start
+        }
+
+        .flex-end{
+            align-content: flex-end;
+        }
+
+        .space-between{
+            align-content: space-between;
+        }
+
+        .space-around{
+            align-content: space-around;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <p>stretch</p>
+    <div class="container stretch">
+        <div class="item">Lorem Ipsum é simplesmente uma</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+    </div>
+
+    <p>center</p>
+    <div class="container center">
+        <div class="item">Lorem Ipsum é simplesmente uma</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+    </div>
+    
+    <p>flex-start</p>
+    <div class="container flex-start">
+        <div class="item">Lorem Ipsum é simplesmente uma</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+    </div>
+
+    <p>flex-end</p>
+    <div class="container flex-end">
+        <div class="item">Lorem Ipsum é simplesmente uma</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+    </div>
+
+    <p>space-between</p>
+    <div class="container space-between">
+        <div class="item">Lorem Ipsum é simplesmente uma</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+    </div>
+
+    <p>space-around</p>
+    <div class="container space-around">
+        <div class="item">Lorem Ipsum é simplesmente uma</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+        <div class="item">simplesmente uma simulação</div>
+        <div class="item">Lorem Ipsum é</div>
+    </div>
+
+    
+    
+</body>
+</html>

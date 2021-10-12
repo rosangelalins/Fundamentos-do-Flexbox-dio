@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex direction</title>
+    <style>
+        .flex-container{
+            margin:0;
+            padding:0;
+            display:flex;
+            list-style: none;
+        }
+
+        /*manipulando os itens dentro do container*/
+        .flex-item{
+            background: blue;
+            height: 50px;/*adicionar altura*/
+            width: 50px;/*adicionar largura*/
+            line-height:50px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .row{
+            /*continua mantendo comportamento padrão*/
+            flex-direction: row;
+        }
+
+        .row-reverse{
+             /*altera a direção oposta do row*/
+            flex-direction: row-reverse;
+        }
+        .row-reverse li {
+             /*pegando somente os li*/
+             background-color: red;
+
+        }
+
+        .column{
+            float: left;
+            flex-direction: column;/*vai se comportar como column*/
+
+        }
+
+        .column li {
+            background-color:orange;
+        }
+
+        .column-reverse{
+            /*altera a direção oposta do column*/
+            float: right;
+            flex-direction: column-reverse;
+        }
+
+        .column-reverse li{
+            background-color:palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <ul class="flex-container row">
+        <li class="flex-item">1</li><!-- chamando a classe flex-item para modificar cada item separadamente.
+        Caso eu não utilize nos próximos itens eles não serão modificados com essa classe-->
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+
+    <!-- exemplo com row-reverse-->
+    <ul class="flex-container row-reverse">
+        <li class="flex-item">1</li><!-- chamando a classe flex-item para modificar cada item separadamente.
+        Caso eu não utilize nos próximos itens eles não serão modificados com essa classe-->
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+
+    <!-- exemplo com column-->
+    <ul class="flex-container column">
+        <li class="flex-item">1</li><!-- chamando a classe flex-item para modificar cada item separadamente.
+        Caso eu não utilize nos próximos itens eles não serão modificados com essa classe-->
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+
+    <!-- exemplo com column-reverse-->
+    <ul class="flex-container column-reverse">
+        <li class="flex-item">1</li><!-- chamando a classe flex-item para modificar cada item separadamente.
+        Caso eu não utilize nos próximos itens eles não serão modificados com essa classe-->
+        <li class="flex-item">2</li>
+        <li class="flex-item">3</li>
+        <li class="flex-item">4</li>
+        <li class="flex-item">5</li>
+    </ul>
+</body>
+</html>
